@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+// Tính tổng bằng vòng lặp
 int sumWithLoop(int n) {
     int sum = 0;
     for (int i = 1; i <= n; i++) {
@@ -8,6 +9,7 @@ int sumWithLoop(int n) {
     return sum;
 }
 
+// Tính tổng bằng công thức
 int sumWithFormula(int n) {
     return n * (n + 1) / 2;
 }
