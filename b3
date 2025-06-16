@@ -5,3 +5,4 @@ int* mallocArray(int n ) {
     }
     return arr;
 }
+//vì cấp phát động một mảng có n phần tử nên bô nhớ cần dùng ti lẹ tuyen tinh voi n , độ phức tạp khong gian là O(n)
