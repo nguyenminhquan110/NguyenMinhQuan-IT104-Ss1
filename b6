@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int countOccurrences(int arr[], int size, int element) {
+    int count = 0;
+    for (int i = 0; i < size; i++) { 
+        if (arr[i] == element) {
+            count++;
+        }
+    }
+    return count;
+}
+
+int main() {
+    int arr[] = {1, 2, 3, 4, 2, 1, 2, 3, 4, 2};
+    int size = sizeof(arr) / sizeof(arr[0]); 
+    int element;
+
+    printf("Nhập phần tử cần đếm: ");
+    scanf("%d", &element);
+
+    int occurrences = countOccurrences(arr, size, element);
+    printf("Phần tử %d xuất hiện %d lần trong mảng.\n", element, occurrences);
+
+    FILE *file = fopen("bai_tap.txt", "w");
+    if (file != NULL) {
+        fprintf(file, "Độ phức tạp thời gian của thuật toán: O(n)\n");
+        fprintf(file, "Độ phức tạp không gian của thuật toán: O(1)\n");
+        fprintf(file, "Thuật toán duyệt qua toàn bộ mảng để đếm số lần xuất hiện của phần tử.\n");
+        fclose(file);
+        printf("Nhận xét đã được ghi vào tệp 'bai_tap.txt'.\n");
+    } else {
+        printf("Không thể mở tệp để ghi nhận xét.\n");
+    }
+
+    return 0;
+}
